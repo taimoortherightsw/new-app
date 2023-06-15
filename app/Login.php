@@ -18,6 +18,15 @@ class Login extends Model
         'password',
     ];
 
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+    ];
+
     public function users()
     {
         return $this->hasMany(User::class, 'user_name', 'user_name');

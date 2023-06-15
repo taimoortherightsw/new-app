@@ -19,15 +19,6 @@ class User extends Authenticatable
         'user_contact',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-    ];
-
     public function login()
     {
         return $this->belongsTo(Login::class, 'user_name', 'user_name');
